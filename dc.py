@@ -8,7 +8,7 @@ def process_data(file_path, cfti_colleges):
     # Create an empty DataFrame to store the filtered data
     filtered_data = pd.DataFrame(columns=['Name', 'University', 'Graduation_Marks', 'CFTI YES/NO'])
 
-    # Loop through each sheet and filter students
+    # Loop through each sheet and fikmlncoienlter stumnb,dents
     for sheet_name in xls.sheet_names:
         sheet_data = pd.read_excel(xls, sheet_name)
         filtered_data = pd.concat([filtered_data, sheet_data[sheet_data['Graduation Marks'] > 8]])
