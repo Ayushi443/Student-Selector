@@ -32,28 +32,41 @@ provided_cfti_colleges = [
     "IIT"
     "INDIAN INSTITUTES OF MANAGEMENT ",
     "INDIAN INSTITUTE OF SCIENCE (IISc), BANGALORE",
-    "INDIAN INSTITUTES OF SCIENCE EDUCATION AND RESEARCH (IISERs) ",
+    "INDIAN INSTITUTES OF SCIENCE EDUCATION AND RESEARCH",
+    "IISER",
     "Indian Institute of Information Technology Allahabad",
-    "Atal Bihari Vajpayee - Indian Institute of Information Technology Gwalior- (ABVIIITM)",
-    "Pandit Dwarka Prasad Mishra Indian Institute of Information Technology, Design and Manufacturing (IIITDM) Jabalpur",
-    "Indian Institute of Information Technology, Design and Manufacturing (IITD&M) Kanchipuram",  
-    "Indian Institute of Information Tehnology, Design and Manufacturing (IIITDM) Kurnool,Andhra Pradesh", 
-    "NATIONAL INSTITUTES OF TECHNICAL TEACHERS TRAINING AND RESEARCH (NITTTRs)",
+    "Atal Bihari Vajpayee Indian Institute of Information Technology Gwalior",
+    "ABVIIITM",
+    "Pandit Dwarka Prasad Mishra Indian Institute of Information Technology, Design and Manufacturing Jabalpur",
+    "IIITDM",
+    "Indian Institute of Information Technology, Design and Manufacturing Kanchipuram",  
+    "IITD&M",
+    "Indian Institute of Information Tehnology, Design and Manufacturing Kurnool,Andhra Pradesh",
+    "IIITDM", 
+    "NATIONAL INSTITUTES OF TECHNICAL TEACHERS TRAINING AND RESEARCH",
+    "NITTTR",
     "NATIONAL INSTITUTES OF TECHNOLOGY"  
-    "National Institute of Industrial Engg. (NITIE), Mumbai",
-    "National Institute of Foundry & Forge Technology (NIFFT), Ranchi",
-    "School of Planning & Architecture (SPA), New Delhi",
-    "School of Planning & Architecture (SPA), Bhopal"
-    "School of Planning & Architecture (SPA), Vijayawada",
+    "NIT",
+    "National Institute of Industrial Engg., Mumbai",
+    "NITIE, Mumbai",
+    "National Institute of Foundry & Forge Technology, Ranchi",
+    "NIFFT Ranchi"
+    "School of Planning & Architecture New Delhi",
+    "School of Planning & Architecture  Bhopal",
+    "School of Planning & Architecture  Vijayawada",
+    "SPA Delhi",
+    "SPA Bhopal",
+    "SPA Vijaywada",
     "Central Institute of Technology, Kokrajhar"
-    "Sant Longowal Institute of Engineering & Technology (SLIET), Longowal, Punjab"
+    "Sant Longowal Institute of Engineering & Technology Longowal, Punjab",
+    "SLIET",
     "North Eastern Regional Institute of Science & Technology (NERIST), Itanagar" 
     "Ghani Khan Choudhury Institute of Engineering & Technology(GKCIET), Malda, West Bengal"
     
 ]
 
 # Replace file paths with the actual paths to your files
-file_path = 'C:\\Users\\AYUSHI\\OneDrive\\Desktop\\DC\\DC PROJECT.xlsx'
+file_path = 'C:\\Users\\AYUSHI\\OneDrive\\Desktop\\DC\\DC PROJECT-1.xlsx'
 output_excel_path = 'C:\\Users\\AYUSHI\\OneDrive\\Desktop\\DC\\Filtered_Result.xlsx'
 
 # Process the data and obtain the result DataFrame
@@ -70,7 +83,7 @@ output_excel_sheet = pd.read_excel(output_excel_path)
 graduation_universities_list = output_excel_sheet['Graduation University'].unique()
 
 # Define a regex pattern to match universities with specific keywords
-keywords_pattern = r"(?i)(INDIAN\s*INSTITUTES?\s*OF\s*TECHNOLOGY|IIT|INDIAN\s*INSTITUTES?\s*OF\s*MANAGEMENT|IIM|INDIAN\s*INSTITUTE\s*OF\s*SCIENCE.BANGALORE|INDIAN\s*INSTITUTES?\s*OF\s*SCIENCE.*RESEARCH|IISER|Indian\s*Institute\s*of\s*Information\s*Technology\s*Allahabad|Atal\s*Bihari\s*Vajpayee\s*Indian\s*Institute\s*of\s*Information\s*Technology.*Gwalior|ABVIIITM|Pandit\s*Dwarka\s*Prasad\s*Mishra\s*Indian\s*Institute\s*of\s*Information\s*Technology.*Jabalpur|IIITDM|Indian\s*Institute\s*of\s*Information\s*Technology.*Kanchipuram|IITD&M|Indian\s*Institute\s*of\s*Information\s*Tehnology.*Kurnool.*Andhra\s*Pradesh|IIITDM|NATIONAL\s*INSTITUTES?\s*OF\s*TECHNICAL\s*TEACHERS?\s*TRAINING.*RESEARCH|NITTTR|NATIONAL\s*INSTITUTES?\s*OF\s*TECHNOLOGY|NIT|National\s*Institute\s*of\s*Industrial\s*Engg.*Mumbai|NITIE|National\s*Institute\s*of\s*Foundry\s&\s*Forge\s*Technology.Ranchi|NIFFT|School\s*of\s*Planning\s&\s*Architecture.Delhi|School\s*of\s*Planning\s&\s*Architecture.Bhopal|School\s*of\s*Planning\s&\s*Architecture.*Vijayawada|Central\s*Institute\s*of\s*Technology.*Kokrajhar|Sant\s*Longowal\s*Institute\s*of\s*Engineering.*Technology|Sant\s*Longowal\s*Institute\s*of\s*Engineering.*Technology.*Punjab|North\s*Eastern\s*Regional\s*Institute\s*of\s*Science.*Technology.*Itanagar|Ghani\s*Khan\s*Choudhury\s*Institute\s*of\s*Engineering.*Technology.*Malda.*West\s*Bengal)"
+keywords_pattern = r"(?i)(INDIAN\s*INSTITUTES?\s*OF\s*TECHNOLOGY|^IIT|INDIAN\s*INSTITUTES?\s*OF\s*MANAGEMENT|^IIM|INDIAN\s*INSTITUTE\s*OF\s*SCIENCE.BANGALORE|^IISC|INDIAN\s*INSTITUTES?\s*OF\s*SCIENCE.*RESEARCH|IISER|Indian\s*Institute\s*of\s*Information\s*Technology\s*Allahabad|Atal\s*Bihari\s*Vajpayee\s*Indian\s*Institute\s*of\s*Information\s*Technology.*Gwalior|ABVIIITM|Pandit\s*Dwarka\s*Prasad\s*Mishra\s*Indian\s*Institute\s*of\s*Information\s*Technology.*Jabalpur|IIITDM|Indian\s*Institute\s*of\s*Information\s*Technology.*Kanchipuram|IITD&M|Indian\s*Institute\s*of\s*Information\s*Tehnology.*Kurnool.*Andhra\s*Pradesh|IIITDM|NATIONAL\s*INSTITUTES?\s*OF\s*TECHNICAL\s*TEACHERS?\s*TRAINING.*RESEARCH|NITTTR|NATIONAL\s*INSTITUTES?\s*OF\s*TECHNOLOGY|^NIT|National\s*Institute\s*of\s*Industrial\s*Mumbai|NITIE|National\s*Institute\s*of\s*Foundry\s*Forge\s*Technology.Ranchi|NIFFT|School\s*of\s*Planning\s&\s*Architecture.Delhi|School\s*of\s*Planning\s&\s*Architecture.Bhopal|School\s*of\s*Planning\s&\s*Architecture.*Vijayawada|^SPA|Central\s*Institute\s*of\s*Technology.*Kokrajhar|Sant\s*Longowal\s*|North\s*Eastern\s*Regional\s*Institute\s*of\s*Science.*Technology.*Itanagar|Ghani\s*Khan\s*Choudhury\s*Institute\s*of\s*Engineering.*Technology.*Malda.*West\s*Bengal)"
 
 def is_cfti(university):
     return bool(re.search(keywords_pattern, university, re.IGNORECASE))
